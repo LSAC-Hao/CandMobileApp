@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="CandMobileApp.CandLawSchoolPage"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+	xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+	xmlns:local="clr-namespace:CandMobileApp;assembly=org.lsac.CandMobileApp"
+    Title="{ StaticResource CandLawSchoolPageTitle }">
+
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <StackLayout Style="{DynamicResource MenuStack}" x:Name="Menu">
+                <StackLayout.BindingContext>
+                    <local:CandCollapsedMenuViewModel />
+                </StackLayout.BindingContext>
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoThinkingJD" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="thinking.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Thinking About Law School" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoChoosingJD" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="choosing.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Choosing a Law School" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoApplyingJD" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="applying.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Applying a Law School" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.Triggers>
+                        <DataTrigger TargetType="StackLayout" Binding="{Binding Path=Collapsed}" Value="False">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </StackLayout.Triggers>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoMore" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="more ..." Style="{ DynamicResource MenuItemTitleMore }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout.Triggers>
+                        <DataTrigger TargetType="StackLayout" Binding="{Binding Path=Collapsed}" Value="True">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </StackLayout.Triggers>
+                    <StackLayout Orientation="Horizontal" >
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GotoFinancingJD" />
+                        </StackLayout.GestureRecognizers>
+                        <ffimageloading:CachedImage Source="financing.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                        <Label Text="Financing a Law School" Style="{ DynamicResource MenuItemTitle }" />
+                        <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                        <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                    </StackLayout>
+                    <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                    <StackLayout Orientation="Horizontal" >
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GotoDiversityJD" />
+                        </StackLayout.GestureRecognizers>
+                        <ffimageloading:CachedImage Source="diversity.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                        <Label Text="Diversity in Law School" Style="{ DynamicResource MenuItemTitle }" />
+                        <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                        <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                    </StackLayout>
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuGroupSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoLLMDegree" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="llm.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="The LLM Degree" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoChoosingLLM" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="choosingllm.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Choosing a LLM Law School" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoLLMProcess" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="llmprocess.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="The LLM Application Process" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuGroupSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoOffGuideJD" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="offguidejd.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <StackLayout Style="{ DynamicResource MenuItemTitleWithDescription }">
+                        <Label Text="LSAC Official Guide" Style="{ DynamicResource MenuItemTitleHasDescription }" />
+                        <Label Text="to ABA-Approved Law School&#8482;" Style="{ DynamicResource MenuItemDescription }" />
+                    </StackLayout>
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoOffGuideLLM" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="offguidellm.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <StackLayout Style="{ DynamicResource MenuItemTitleWithDescription }">
+                        <Label Text="LSAC Official Guide" Style="{ DynamicResource MenuItemTitleHasDescription }" />
+                        <Label Text="to LLM/Graduate Law Programs" Style="{ DynamicResource MenuItemDescription }" />
+                    </StackLayout>
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoForums" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="forums.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Law School Forums" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoRecruitment" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="recruitment.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <StackLayout Style="{ DynamicResource MenuItemTitleWithDescription }">
+                        <Label Text="Recruitment Events" Style="{ DynamicResource MenuItemTitleHasDescription }" />
+                        <Label Text="REGIONAL" Style="{ DynamicResource MenuItemDescription }" />
+                    </StackLayout>
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

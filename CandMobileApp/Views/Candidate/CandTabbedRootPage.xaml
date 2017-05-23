@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:CandMobileApp;assembly=org.lsac.CandMobileApp"
+	x:Class="CandMobileApp.CandTabbedRootPage">
+	<NavigationPage Title="News" Icon="news_feed.png">
+		<x:Arguments>
+			<local:CandNewsPage />
+		</x:Arguments>
+	</NavigationPage>
+	<NavigationPage Title="Law School" Icon="law_school.png">
+		<x:Arguments>
+			<local:CandLawSchoolPage />
+		</x:Arguments>
+	</NavigationPage>
+	<NavigationPage Title="LSAT" Icon="lsat.png">
+		<x:Arguments>
+			<local:CandLSATPage />
+		</x:Arguments>
+	</NavigationPage>
+	<NavigationPage Title="Notification" Icon="notification.png">
+		<x:Arguments>
+			<local:ProductsCatalogPage />
+		</x:Arguments>
+	</NavigationPage>
+	<NavigationPage Title="Me" Icon="me.png">
+		<x:Arguments>
+			<local:ChatTimelinePage />
+		</x:Arguments>
+	</NavigationPage>
+</TabbedPage>

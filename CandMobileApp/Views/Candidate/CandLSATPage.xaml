@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="CandMobileApp.CandLSATPage"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+	xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
+	xmlns:local="clr-namespace:CandMobileApp;assembly=org.lsac.CandMobileApp"
+    Title="{ StaticResource CandLSATPageTitle }">
+
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <StackLayout Style="{DynamicResource MenuStack}" x:Name="Menu" >
+                <StackLayout.BindingContext>
+                    <local:CandCollapsedMenuViewModel />
+                </StackLayout.BindingContext>
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoAboutLSAT" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="aboutlsat.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="About the LSAT" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoLSATDates" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="lsatdate.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="LSAT Dates and Deadlines" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoFees" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="fees.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Fees and Fee Waivers" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoPreparingLSAT" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="preparelsat.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Preparing for the LSAT" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoDayOfTheTest" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="dayofthetest.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Day of the Test" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoLSATScore" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="lsatscore.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Your LSAT Score" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoTestCenters" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="testcenters.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Test Centers" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.Triggers>
+                        <DataTrigger TargetType="StackLayout" Binding="{Binding Path=Collapsed}" Value="False">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </StackLayout.Triggers>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoMore" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="more ..." Style="{ DynamicResource MenuItemTitleMore }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout.Triggers>
+                        <DataTrigger TargetType="StackLayout" Binding="{Binding Path=Collapsed}" Value="True">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </StackLayout.Triggers>
+                    <StackLayout Orientation="Horizontal" >
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GotoDisablities" />
+                        </StackLayout.GestureRecognizers>
+                        <ffimageloading:CachedImage Source="disablilities.jpg" Style="{ DynamicResource MenuItemImageIcon }" />
+                        <Label Text="Test Takers with Disabilities" Style="{ DynamicResource MenuItemTitle }" />
+                        <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                        <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                    </StackLayout>
+                    <BoxView Style="{ DynamicResource MenuItemSeperator }" />
+                    <StackLayout Orientation="Horizontal" >
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GotoSabbath" />
+                        </StackLayout.GestureRecognizers>
+                        <ffimageloading:CachedImage Source="sabbath.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                        <Label Text="Saturday Sabbath Obervers" Style="{ DynamicResource MenuItemTitle }" />
+                        <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                        <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView Style="{ DynamicResource MenuGroupSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoRegisterLSAT" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="register.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Register LSAT" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+                <BoxView Style="{ DynamicResource MenuGroupSeperator }" />
+                <StackLayout Orientation="Horizontal" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GotoLSATPrepTools" />
+                    </StackLayout.GestureRecognizers>
+                    <ffimageloading:CachedImage Source="shop.png" Style="{ DynamicResource MenuItemImageIcon }" />
+                    <Label Text="Shop LSAT Prep Tools" Style="{ DynamicResource MenuItemTitle }" />
+                    <local:Badge BadgeText="" Style="{ DynamicResource MenuItemBadge }" />
+                    <Label Style="{ DynamicResource MainMenuRightChevronStyle }" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

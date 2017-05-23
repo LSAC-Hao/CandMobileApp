@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CandMobileApp.CandLawSchoolPage"
+             xmlns:local="clr-namespace:CandMobileApp;assembly=org.lsac.CandMobileApp"
+             Title="{ StaticResource CandLawSchoolPageTitle }" >
+ 
+        <ContentPage.Content>
+        <ScrollView>
+            <TableView Intent="Menu" Style="{DynamicResource MenuTabletViewStyle}">
+                <TableRoot>
+                    <TableSection Title="">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="law_school.png" />
+                                <Label Text="left"
+                              TextColor="#f35e20" />
+                                <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title="">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="law_school.png" />
+                                <Label Text="left"
+                              TextColor="#f35e20" />
+                                <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="law_school.png" />
+                                <Label Text="left"
+                              TextColor="#f35e20" />
+                                <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="law_school.png" />
+                                <Label Text="left"
+                              TextColor="#f35e20" />
+                                <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection Title=" ">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="law_school.png" />
+                                <Label Text="left"
+                              TextColor="#f35e20" />
+                                <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="law_school.png" />
+                                <Label Text="left"
+                              TextColor="#f35e20" />
+                                <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="law_school.png" />
+                                <Label Text="left"
+                              TextColor="#f35e20" />
+                                <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </ScrollView>
+    </ContentPage.Content>
+<!--
+        <ListView
+			ItemsSource="{Binding LawSchoolMenu}"
+			ItemTapped="OnItemTapped"
+			Style="{DynamicResource MainMenuListViewStyle}"
+			VerticalOptions="FillAndExpand"
+		>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <local:CategoriesListWithIconsItemTemplate />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+-->
+ </ContentPage>
