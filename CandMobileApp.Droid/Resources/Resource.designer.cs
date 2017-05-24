@@ -2153,6 +2153,10 @@ namespace CandMobileApp.Droid
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_id = global::CandMobileApp.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::CandMobileApp.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Lottie.Forms.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::CandMobileApp.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::PCLCrypto.Resource.String.ApplicationName = global::CandMobileApp.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::CandMobileApp.Droid.Resource.String.Hello;
+			global::PCLStorage.Resource.String.ApplicationName = global::CandMobileApp.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::CandMobileApp.Droid.Resource.String.Hello;
 			global::UXDivers.Effects.Droid.Resource.Animation.abc_fade_in = global::CandMobileApp.Droid.Resource.Animation.abc_fade_in;
 			global::UXDivers.Effects.Droid.Resource.Animation.abc_fade_out = global::CandMobileApp.Droid.Resource.Animation.abc_fade_out;
 			global::UXDivers.Effects.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::CandMobileApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
