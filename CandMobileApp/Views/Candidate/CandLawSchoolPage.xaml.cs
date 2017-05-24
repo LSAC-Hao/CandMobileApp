@@ -14,35 +14,35 @@ namespace CandMobileApp
 			InitializeComponent ();
 		}
 
-        private async void GotoThinkingJD(Object sender, ItemTappedEventArgs e)
+        private async void GotoThinkingJD(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoChoosingJD(Object sender, ItemTappedEventArgs e)
+        private async void GotoChoosingJD(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoApplyingJD(Object sender, ItemTappedEventArgs e)
+        private async void GotoApplyingJD(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoFinancingJD(Object sender, ItemTappedEventArgs e)
+        private async void GotoFinancingJD(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoDiversityJD(Object sender, ItemTappedEventArgs e)
+        private async void GotoDiversityJD(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
@@ -50,49 +50,49 @@ namespace CandMobileApp
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
 
-        private async void GotoLLMDegree(Object sender, ItemTappedEventArgs e)
+        private async void GotoLLMDegree(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoChoosingLLM(Object sender, ItemTappedEventArgs e)
+        private async void GotoChoosingLLM(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoLLMProcess(Object sender, ItemTappedEventArgs e)
+        private async void GotoLLMProcess(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoOffGuideJD(Object sender, ItemTappedEventArgs e)
+        private async void GotoOffGuideJD(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoOffGuideLLM(Object sender, ItemTappedEventArgs e)
+        private async void GotoOffGuideLLM(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoForums(Object sender, ItemTappedEventArgs e)
+        private async void GotoForums(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoRecruitment(Object sender, ItemTappedEventArgs e)
+        private async void GotoRecruitment(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
@@ -100,7 +100,7 @@ namespace CandMobileApp
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
     
-        private void GotoMore(Object sender, ItemTappedEventArgs e)
+        private void GotoMore(Object sender, EventArgs e)
         {
             CandCollapsedMenuViewModel _me = (CandCollapsedMenuViewModel)Menu.BindingContext;
             if (_me.Collapsed) _me.Collapsed = false; else _me.Collapsed = true;

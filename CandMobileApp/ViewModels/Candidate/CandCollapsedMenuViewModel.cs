@@ -11,7 +11,7 @@ namespace CandMobileApp
 
     class CandCollapsedMenuViewModel : INotifyPropertyChanged
     {
-        bool _collapsed = true;
+        bool _collapsed = false;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

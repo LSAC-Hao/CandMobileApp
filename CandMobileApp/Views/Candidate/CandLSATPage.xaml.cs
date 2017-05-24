@@ -14,35 +14,35 @@ namespace CandMobileApp
 			InitializeComponent ();
 		}
 
-        private async void GotoAboutLSAT(Object sender, ItemTappedEventArgs e)
+        private async void GotoAboutLSAT(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoLSATDates(Object sender, ItemTappedEventArgs e)
+        private async void GotoLSATDates(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoFees(Object sender, ItemTappedEventArgs e)
+        private async void GotoFees(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoPreparingLSAT(Object sender, ItemTappedEventArgs e)
+        private async void GotoPreparingLSAT(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoDayOfTheTest(Object sender, ItemTappedEventArgs e)
+        private async void GotoDayOfTheTest(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
@@ -50,47 +50,47 @@ namespace CandMobileApp
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
 
-        private async void GotoLSATScore(Object sender, ItemTappedEventArgs e)
+        private async void GotoLSATScore(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoTestCenters(Object sender, ItemTappedEventArgs e)
+        private async void GotoTestCenters(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoDisablities(Object sender, ItemTappedEventArgs e)
+        private async void GotoDisablities(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoSabbath(Object sender, ItemTappedEventArgs e)
+        private async void GotoSabbath(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private void GotoMore(Object sender, ItemTappedEventArgs e)
+        private void GotoMore(Object sender, EventArgs e)
         {
             CandCollapsedMenuViewModel _me = (CandCollapsedMenuViewModel) Menu.BindingContext;
             if (_me.Collapsed) _me.Collapsed = false; else _me.Collapsed = true;
         }
-        private async void GotoRegisterLSAT(Object sender, ItemTappedEventArgs e)
+        private async void GotoRegisterLSAT(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
 
             await CandRouterPage.NavigateToPage(myMenuItem.Key, Navigation);
         }
-        private async void GotoLSATPrepTools(Object sender, ItemTappedEventArgs e)
+        private async void GotoLSATPrepTools(Object sender, EventArgs e)
         {
             var selectedItem = ((ListView)sender).SelectedItem;
             var myMenuItem = (CandMenuItem)selectedItem;
